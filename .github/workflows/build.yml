@@ -23,8 +23,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Replace Version
         run: |
-          sed -i 's/RABBITMQ_VER/${rabbitmqVer}/g' Dockerfile
-          sed -i 's/DELAYED_PLUGIN/${delayedPlugin}/g' Dockerfile
+          sed -i "s/RABBITMQ_VER/${rabbitmqVer}/g" Dockerfile
+          sed -i "s/DELAYED_PLUGIN/${delayedPlugin}/g" Dockerfile
           cat Dockerfile
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
