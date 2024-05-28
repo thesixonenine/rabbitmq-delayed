@@ -25,6 +25,7 @@ jobs:
         run: |
           sed -i "s/RABBITMQ_VER/${rabbitmqVer}/g" Dockerfile
           sed -i "s/DELAYED_PLUGIN/${delayedPlugin}/g" Dockerfile
+          wget "https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/releases/download/v${delayedPlugin}/rabbitmq_delayed_message_exchange-${delayedPlugin}.ez"
           cat Dockerfile
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
