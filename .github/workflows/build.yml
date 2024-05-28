@@ -39,4 +39,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: thesixonenine/rabbitmq-delayed:latest
+          tags: "thesixonenine/rabbitmq-delayed:${rabbitmqVer}"
