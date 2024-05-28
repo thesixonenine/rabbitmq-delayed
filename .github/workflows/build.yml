@@ -25,6 +25,7 @@ jobs:
         run: |
           sed -i 's/RABBITMQ_VER/${rabbitmqVer}/g' Dockerfile
           sed -i 's/DELAYED_PLUGIN/${delayedPlugin}/g' Dockerfile
+          cat Dockerfile
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Build
